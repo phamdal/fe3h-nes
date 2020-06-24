@@ -1,13 +1,28 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <!-- <h1>{{ msg }}</h1> -->
     <span class="pixel nes-text is-primary">Primary</span>
+  <div class="columns is-desktop is-centered">
+    <div class="column">
+      <CharacterSelectionSquare name="alois"/>
+    </div>
+    <div class="column">
+    </div>
+    <div class="column">3</div>
+    <div class="column">4</div>
+  </div>
   </div>
 </template>
 
 <script>
+import CharacterSelectionSquare from "@/components/CharacterSelectionSquare.vue"; 
+
 export default {
   name: "HelloWorld",
+  components: 
+  {
+    CharacterSelectionSquare
+  },
   props: {
     msg: String
   }

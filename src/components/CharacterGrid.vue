@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <!-- <h1>{{ msg }}</h1> -->
-    <span class="pixel nes-text is-primary">Primary</span>
+    <!-- <span class="pixel nes-text is-primary">Primary</span> -->
   <div class="columns is-desktop is-centered">
     <div class="column">
       <CharacterSelectionSquare name="edelgard"/>

@@ -2,3 +2,8 @@
 {
     font-family: 'Press Start 2P'; 
 }
+
+.capitalize
+{
+    text-transform: capitalize;
+}

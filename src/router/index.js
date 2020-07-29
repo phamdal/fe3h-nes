@@ -14,7 +14,8 @@ const routes = [
     path: "/character", 
     name: "character", 
     component: () => 
-      import("../views/Character.vue")
+      import("../views/Character.vue"), 
+    props: true
   }, 
   {
     path: "/lostItems", 

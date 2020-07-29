@@ -1,6 +1,8 @@
 <template>
       <div>
-        <img :src=getImageUrl(name) :alt="name">
+            <router-link :to="{name: 'character', params: { name: name }}">
+                <img :src=getImageUrl(name) :alt="name">
+            </router-link>  
       </div>
 </template>
 

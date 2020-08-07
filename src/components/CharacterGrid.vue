@@ -5,7 +5,7 @@
   <div class="columns is-desktop is-centered">
     <div class="column">
       <CharacterSelectionSquare name="edelgard"/>
-      <CharacterSelectionSqaure name="hubuert"/>
+      <CharacterSelectionSquare name="hubert"/>
       <CharacterSelectionSquare name="bernadetta"/>
       <CharacterSelectionSquare name="ferdinand"/>
       <CharacterSelectionSquare name="linhardt"/>
@@ -48,7 +48,7 @@
       <CharacterSelectionSquare name="gilbert"/>
       <CharacterSelectionSquare name="alois"/>
       <CharacterSelectionSquare name="shamir"/>
-      <CharacterSelectionSquare name="cyrill"/>
+      <CharacterSelectionSquare name="cyril"/>
       <CharacterSelectionSquare name="jeritza"/>
       <CharacterSelectionSquare name="anna"/>
       <CharacterSelectionSquare name="catherine"/>

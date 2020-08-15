@@ -1,30 +1,38 @@
 <template>
   <div>
-    <h1 class="title is-1 pixel-font capitalize">{{name}}</h1>
-    <div>
-      <img :src=getImageUrl(name) :alt="name">
+    <div class='header-container'> 
+         <h1 class="title is-1 pixel-font capitalize character-title">{{name}}</h1><img :src=getSpriteImageUrl(name) :alt="name">
     </div>
-    <div class="nes-container with-title pixel-font">
-      <p class="title">Favorite Items</p>
-      <div class="lists">
-        <ul class="nes-list is-circle">
-          <li v-for="gift in gifts" :key="gift" class="listItem">
-            <span>{{gift}}</span>
-          </li>
-        </ul>
+    <div class="columns is-vcentered">
+      <div class="column">
+        <div>
+          <img :src=getImageUrl(name) :alt="name">
+        </div>
+      </div>
+      <div class="column">
+        <div class="nes-container with-title pixel-font outer-container">
+          <p class="title">Favorite Items</p>
+          <div class="lists">
+            <ul class="nes-list is-circle">
+              <li v-for="gift in gifts" :key="gift" class="listItem">
+                <span>{{gift}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="nes-container with-title pixel-font outer-container">
+          <p class="title">Lost Items</p>
+          <div class="lists">
+            <ul class="nes-list is-circle">
+              <li v-for="item in lostItems" :key="item" class="listItem">
+                <span>{{item}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="nes-container with-title pixel-font">
-      <p class="title">Lost Items</p>
-      <div class="lists">
-        <ul class="nes-list is-circle">
-          <li v-for="item in lostItems" :key="item" class="listItem">
-            <span>{{item}}</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="nes-container with-title pixel-font">
+    <div class="nes-container with-title pixel-font outer-container">
       <p class="title">Tea Time</p>
 
       <div class="nes-container with-title">
@@ -67,6 +75,9 @@ export default {
     methods: {
         getImageUrl(name) {
             return name ? require(`@/assets/characters/${name}.png`): ''; 
+        }, 
+        getSpriteImageUrl(name) {
+          return name ? require(`@/assets/sprites/${name}.png`): ''; 
         }
     }, 
     data() {
@@ -108,6 +119,22 @@ export default {
 .nes-container
 {
   margin-top: 3em;
+}
+
+.outer-container
+{
+  margin-left: 3em; 
+  margin-right: 3em; 
+}
+
+.header-container
+{
+  display:inline-flex; 
+}
+
+.character-title
+{
+  padding-top: 1em; 
 }
 
 </style>

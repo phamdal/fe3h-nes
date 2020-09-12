@@ -12,5 +12,8 @@ const apiClient = axios.create({
 export default {
     getCharacterInfo(name) {
         return apiClient.get('/' + name); 
+    }, 
+    getLectureQuestions(query) {
+        return apiClient.post('/lecture', {searchQuery: query})
     }
 }

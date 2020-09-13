@@ -14,6 +14,12 @@ export default {
         return apiClient.get('/' + name); 
     }, 
     getLectureQuestions(query) {
-        return apiClient.post('/lecture', {searchQuery: query})
+        return apiClient.post('/lecture', {searchQuery: query}); 
+    }, 
+    getConfessionalQuestions(query) {
+        return apiClient.post('/adviceBox', {searchQuery: query}); 
+    }, 
+    getLostItems(query) {
+        return apiClient.post('/lostItems', {searchQuery: query}); 
     }
 }
